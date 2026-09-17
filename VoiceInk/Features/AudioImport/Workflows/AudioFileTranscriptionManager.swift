@@ -152,8 +152,13 @@ class AudioTranscriptionManager: ObservableObject {
             let samples = try await audioProcessor.processAudioToSamples(item.url)
             try Task.checkCancellation()
 
-            let audioAsset = AVURLAsset(url: item.url)
-            let duration = CMTimeGetSeconds(try await audioAsset.load(.duration))
+            let duration: TimeInterval
+            if item.url.pathExtension.lowercased() == "webm" {
+                duration = Double(samples.count) / AudioProcessor.AudioFormat.targetSampleRate
+            } else {
+                let audioAsset = AVURLAsset(url: item.url)
+                duration = CMTimeGetSeconds(try await audioAsset.load(.duration))
+            }
 
             let recordingsDirectory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[
                 0
