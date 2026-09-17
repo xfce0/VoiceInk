@@ -35,6 +35,12 @@ class AudioProcessor {
     }
 
     func processAudioToSamples(_ url: URL) async throws -> [Float] {
+        if url.pathExtension.lowercased() == "webm" {
+            let convertedURL = try await FFmpegAudioConverter.convertWebMToWav(url)
+            defer { try? FileManager.default.removeItem(at: convertedURL) }
+            return try readUsingAudioFile(convertedURL)
+        }
+
         do {
             return try readUsingAudioFile(url)
         } catch {

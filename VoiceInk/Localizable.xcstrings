@@ -17894,18 +17894,18 @@
         }
       }
     },
-    "Supports WAV, MP3, M4A, AIFF, MP4, MOV, AAC, FLAC, CAF, AMR, OGG, OPUS, 3GP" : {
+    "Supports WAV, MP3, M4A, AIFF, MP4, MOV, AAC, FLAC, CAF, AMR, OGG, OPUS, 3GP, WEBM" : {
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Unterstützt WAV, MP3, M4A, AIFF, MP4, MOV, AAC, FLAC, CAF, AMR, OGG, OPUS, 3GP"
+            "value" : "Unterstützt WAV, MP3, M4A, AIFF, MP4, MOV, AAC, FLAC, CAF, AMR, OGG, OPUS, 3GP, WEBM"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支持 WAV、MP3、M4A、AIFF、MP4、MOV、AAC、FLAC、CAF、AMR、OGG、OPUS、3GP"
+            "value" : "支持 WAV、MP3、M4A、AIFF、MP4、MOV、AAC、FLAC、CAF、AMR、OGG、OPUS、3GP、WEBM"
           }
         }
       }

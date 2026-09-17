@@ -5,12 +5,14 @@
 - macOS 14.4 or later
 - Xcode with Command Line Tools
 - Git
+- FFmpeg (`brew install ffmpeg`)
 
 ## Local Build
 
 ```bash
 git clone https://github.com/Beingpax/VoiceInk.git
 cd VoiceInk
+brew install ffmpeg
 make local
 open ~/Downloads/VoiceInk.app
 ```
